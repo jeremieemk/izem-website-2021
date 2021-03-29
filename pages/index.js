@@ -20,10 +20,16 @@ export default function Home(props) {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
         initial={{ opacity: 0 }}
-        className="flex"
+        className=""
       >
-        <div className="">
-          <h1 className="">iZem site</h1>
+        <div className="h-screen p-8 flex flex-col justify-center items-center text-center">
+          Hey, I'm Jérémie Moussaïd Kerouanton aka{" "}
+          <span className="highlight text-2xl m-3">iZem</span>
+          <span>
+            I produce <span className="highlight--secondary">music</span> and I
+            write
+            <span className="highlight--secondary"> code</span>
+          </span>
         </div>
       </motion.div>
     </>

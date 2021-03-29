@@ -29,10 +29,14 @@ body {
   box-shadow: rgb(34, 34, 34) 2px 2px 0px 0px;
 }
 
-h1 {
+.highlight {
   background-color: rgb(250, 199, 255);
   padding: 5px 10px;
-  width: fit-content;
-  font-size: 2.3rem;
   letter-spacing: 4px;
+}
+
+.highlight--secondary {
+  background-color: rgb(229, 255, 240);
+  padding: 3px 6px;
+  color: rgb(34, 34, 34);
 }
