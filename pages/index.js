@@ -27,8 +27,7 @@ export default function Home(props) {
           <span className="highlight text-2xl m-3">iZem</span>
           <span>
             I produce <span className="highlight--secondary">music</span> and I
-            write
-            <span className="highlight--secondary"> code</span>
+            write <span className="highlight--secondary">code</span>
           </span>
         </div>
       </motion.div>
