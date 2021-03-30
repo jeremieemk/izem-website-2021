@@ -22,7 +22,7 @@ export default function Home(props) {
         initial={{ opacity: 0 }}
         className=""
       >
-        <div className="h-screen p-8 flex flex-col justify-center items-center text-center">
+        <div className="h-screen p-10 flex flex-col justify-center items-center text-center">
           Hey, I'm Jérémie Moussaïd Kerouanton aka{" "}
           <span className="highlight text-2xl m-3">iZem</span>
           <span>
