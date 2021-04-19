@@ -1,9 +1,9 @@
 import Prismic from "prismic-javascript";
 import Head from "next/head";
 import { motion } from "framer-motion";
+import Post from "./components/Post";
 
 export default function Home(props) {
-  console.log(props);
   return (
     <>
       <Head>
@@ -30,6 +30,7 @@ export default function Home(props) {
             write <span className="highlight--secondary">code</span>
           </span>
         </div>
+        {props.blogPosts && <Post posts={props.blogPosts} />}
       </motion.div>
     </>
   );
