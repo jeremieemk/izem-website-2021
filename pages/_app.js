@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
     <div className="p-4" id="outer-container">
       <Nav pageWrapId={"page-wrap"} outerContainerId={"outer-container"} />
       <Component {...pageProps} id="page-wrap" />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
