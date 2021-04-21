@@ -5,23 +5,26 @@ export default function Post(props) {
   console.log(props);
   const posts = props.posts;
   return (
-    <div className="relative mt-8  w-2/3 h-96">
+    <>
       {posts.map((post) => {
         return (
-          <>
-            <div className="relative mt-8  w-full h-full ">
-              <Image
-                src={post.data.image.url}
-                alt="post-image"
-                layout="fill"
-                objectFit="cover"
-              />
+          <div key={post.id} className="max-w-2xl">
+            <div className="w-full h-96">
+              <div className="relative w-full h-full ">
+                <Image
+                  src={post.data.image.url}
+                  alt="post-image"
+                  layout="fill"
+                  objectFit="cover"
+                  objectPosition="center center"
+                />
+              </div>
             </div>
-            <h3> {RichText.render(post.data.title)} </h3>
-            <p> {RichText.render(post.data.text)} </p>
-          </>
+            <div> {RichText.render(post.data.title)} </div>
+            <div> {RichText.render(post.data.text)} </div>
+          </div>
         );
       })}
-    </div>
+    </>
   );
 }

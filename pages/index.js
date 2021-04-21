@@ -22,15 +22,9 @@ export default function Home(props) {
         initial={{ opacity: 0 }}
         className=""
       >
-        <div className="h-screen p-10 flex flex-col justify-center items-center text-center">
-          Hey, I'm Jérémie Moussaïd Kerouanton aka{" "}
-          <span className="highlight text-2xl m-3">iZem</span>
-          <span>
-            I produce <span className="highlight--secondary">music</span> and I
-            write <span className="highlight--secondary">code</span>
-          </span>
+        <div className="flex justify-center w-full">
+          {props.blogPosts && <Post posts={props.blogPosts} />}
         </div>
-        {props.blogPosts && <Post posts={props.blogPosts} />}
       </motion.div>
     </>
   );
