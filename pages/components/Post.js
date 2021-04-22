@@ -1,5 +1,6 @@
 import { RichText } from "prismic-reactjs";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Post(props) {
   console.log(props);
@@ -47,7 +48,9 @@ export default function Post(props) {
                 />
               </div>
             </div>
-            <a href="">Read More</a>
+            <Link shallow passHref href={`/work/${post.slugs[0]}`}>
+              <a> Read More </a>
+            </Link>
           </div>
         );
       })}

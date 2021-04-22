@@ -7,7 +7,7 @@ export default function Nav() {
       className="w-full my-3 grid grid-cols-3 md:flex md:justify-center
     "
     >
-      <Link shallow passHref href="/">
+      <Link shallow passHref href="/work">
         <a className={linkClasses}> Work </a>
       </Link>
       <Link shallow passHref href="/about">
