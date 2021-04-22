@@ -14,7 +14,7 @@ export default function Home(props) {
           type="font/otf"
           crossorigin="anonymous"
         ></link>
-        <title>My new site</title>
+        <title>iZem</title>
       </Head>
       <motion.div
         animate={{ opacity: 1 }}

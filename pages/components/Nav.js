@@ -8,7 +8,7 @@ export default function Nav() {
     "
     >
       <Link shallow passHref href="/">
-        <a className={linkClasses}> Releases </a>
+        <a className={linkClasses}> Work </a>
       </Link>
       <Link shallow passHref href="/about">
         <a className={linkClasses}> Bio </a>
