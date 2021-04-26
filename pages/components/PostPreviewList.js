@@ -1,6 +1,7 @@
 import { RichText } from "prismic-reactjs";
 import Image from "next/image";
 import Link from "next/link";
+import StreamingLinks from "./StreamingLinks";
 
 export default function PostPreviewList(props) {
   const posts = props.posts;
@@ -9,33 +10,18 @@ export default function PostPreviewList(props) {
     <>
       {posts.map((post) => {
         return (
-          <div key={post.id} className="mt-8 max-w-2xl grid grid-cols-2">
-            <div>
-              <div className="text-2xl">{RichText.render(post.data.title)}</div>
-              <div>
-                <a
-                  href={post.data.spotify.url}
-                  target="_blank"
-                  className="highlight--secondary"
-                >
-                  spotify
-                </a>
-                <a
-                  href={post.data.bandcamp.url}
-                  target="_blank"
-                  className="highlight--secondary"
-                >
-                  bandcamp
-                </a>
-                <a
-                  href={post.data.youtube.url}
-                  target="_blank"
-                  className="highlight--secondary"
-                >
-                  youtube
-                </a>
+          <div key={post.id} className="mt-8 max-w-2xl grid grid-cols-2 ">
+            <div className="mr-6">
+              <div className="text-2xl mb-4">
+                {RichText.render(post.data.title)}
               </div>
-              <div className="mt-8"> {RichText.render(post.data.preview)} </div>
+              <StreamingLinks post={post} />
+              <div className="mt-8 mb-2 text-sm">
+                {RichText.render(post.data.preview)}
+              </div>
+              <Link shallow passHref href={`/work/${post.uid}`}>
+                <a> Read More </a>
+              </Link>
             </div>
             <div className="w-60 h-60 ">
               <div className="relative w-full h-full ">
@@ -48,9 +34,6 @@ export default function PostPreviewList(props) {
                 />
               </div>
             </div>
-            <Link shallow passHref href={`/work/${post.uid}`}>
-              <a> Read More </a>
-            </Link>
           </div>
         );
       })}

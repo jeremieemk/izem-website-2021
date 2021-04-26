@@ -1,12 +1,24 @@
 import { useRouter } from "next/router";
 import Prismic from "prismic-javascript";
 import SinglePost from "../components/SinglePost";
+import { motion } from "framer-motion";
 
 export default function Post(props) {
   const router = useRouter();
   const uid = router.query.uid;
   console.log("yes", props);
-  return <SinglePost post={props.post} />;
+  return (
+    <motion.div
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      initial={{ opacity: 0 }}
+      className=""
+    >
+      <div className="w-full flex justify-center">
+        <SinglePost post={props.post} />
+      </div>
+    </motion.div>
+  );
 }
 
 export async function getStaticProps(context) {
