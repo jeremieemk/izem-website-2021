@@ -1,11 +1,12 @@
 import { useRouter } from "next/router";
 import Prismic from "prismic-javascript";
+import SinglePost from "../components/SinglePost";
 
-export default function SinglePost(props) {
+export default function Post(props) {
   const router = useRouter();
   const uid = router.query.uid;
   console.log("yes", props);
-  return <div className="mt-8 w-full">{uid && <span>Post: {uid}</span>}</div>;
+  return <SinglePost post={props.post} />;
 }
 
 export async function getStaticProps(context) {

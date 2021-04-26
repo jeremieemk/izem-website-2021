@@ -1,7 +1,7 @@
 import Prismic from "prismic-javascript";
 import Head from "next/head";
 import { motion } from "framer-motion";
-import Post from "../components/Post";
+import PostPreviewList from "../components/PostPreviewList";
 
 export default function Work(props) {
   console.log("index page", props);
@@ -24,7 +24,7 @@ export default function Work(props) {
         className=""
       >
         <div className="flex justify-center w-full">
-          {props.blogPosts && <Post posts={props.blogPosts} />}
+          {props.blogPosts && <PostPreviewList posts={props.blogPosts} />}
         </div>
       </motion.div>
     </>
