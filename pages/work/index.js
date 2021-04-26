@@ -1,7 +1,51 @@
-export default function Work() {
+import Prismic from "prismic-javascript";
+import Head from "next/head";
+import { motion } from "framer-motion";
+import Post from "../components/Post";
+
+export default function Work(props) {
+  console.log("index page", props);
   return (
-    <div className="mt-8 w-full">
-      <span>Work</span>
-    </div>
+    <>
+      <Head>
+        <link
+          rel="preload"
+          as="font"
+          href="/fonts/bentonsansregular.otf"
+          type="font/otf"
+          crossorigin="anonymous"
+        ></link>
+        <title>iZem -- Work</title>
+      </Head>
+      <motion.div
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        initial={{ opacity: 0 }}
+        className=""
+      >
+        <div className="flex justify-center w-full">
+          {props.blogPosts && <Post posts={props.blogPosts} />}
+        </div>
+      </motion.div>
+    </>
   );
+}
+
+export async function getStaticProps() {
+  // add your Prismic project
+  const apiEndpoint = "https://izem-site-2021.cdn.prismic.io/api/v2";
+  const Client = Prismic.client(apiEndpoint);
+  const data = await Client.query(
+    // specify the data you're querying
+    Prismic.Predicates.at("document.type", "blog-post")
+  );
+  const blogPosts = data.results;
+  if (!data) {
+    return {
+      notFound: true,
+    };
+  }
+  return {
+    props: { blogPosts }, // will be passed to the page component as props
+  };
 }

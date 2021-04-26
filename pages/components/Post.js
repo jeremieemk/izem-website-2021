@@ -3,8 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Post(props) {
-  console.log(props);
   const posts = props.posts;
+  console.log(props);
   return (
     <>
       {posts.map((post) => {
@@ -48,7 +48,7 @@ export default function Post(props) {
                 />
               </div>
             </div>
-            <Link shallow passHref href={`/work/${post.slugs[0]}`}>
+            <Link shallow passHref href={`/work/${post.uid}`}>
               <a> Read More </a>
             </Link>
           </div>
