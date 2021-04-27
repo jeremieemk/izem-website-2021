@@ -4,7 +4,7 @@ export default function Nav() {
   const linkClasses = "mr-5";
   return (
     <div
-      className="w-full my-3 grid grid-cols-3 md:flex md:justify-center
+      className="w-full my-3 grid grid-cols-3 md:flex md:justify-center md:items-center
     "
     >
       <Link shallow passHref href="/work">
@@ -17,6 +17,7 @@ export default function Nav() {
         <a className={linkClasses}> Contact </a>
       </Link>
       <a className={linkClasses}>Elis Records</a>
+
       <a className={linkClasses}>Instagram</a>
       <a className={linkClasses}>Spotify</a>
       <a className={linkClasses}>Deezer</a>

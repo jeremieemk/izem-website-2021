@@ -8,7 +8,7 @@ export default function SinglePost(props) {
 
   return (
     <div key={post.id} className="mt-8 max-w-2xl ">
-      <div className="w-2xl h-60 ">
+      <div className="w-2xl h-96 ">
         <div className="relative w-full h-full ">
           <Image
             src={post.data.image.url}

@@ -5,13 +5,16 @@ export default function StreamingLinks(props) {
     <div>
       {platforms.map((platform) => {
         return (
-          <a
-            href={post.data[platform].url}
-            target="_blank"
-            className="highlight--secondary mr-2"
-          >
-            {platform}
-          </a>
+          post.data[platform].url && (
+            <a
+              href={post.data[platform].url}
+              target="_blank"
+              className="highlight--secondary mr-2 text-sm"
+              key={platform}
+            >
+              {platform}
+            </a>
+          )
         );
       })}
     </div>
