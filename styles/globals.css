@@ -7,6 +7,17 @@
   src: url("/fonts/bentonsansregular.otf");
 }
 
+@layer base {
+  a {
+    @apply cursor-pointer;
+    @apply text-primary;
+    @apply hover:opacity-75;
+  }
+  p {
+    @apply mb-4;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;

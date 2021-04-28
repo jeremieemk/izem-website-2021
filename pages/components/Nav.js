@@ -1,10 +1,10 @@
 import Link from "next/link";
 
 export default function Nav() {
-  const linkClasses = "mr-5";
+  const linkClasses = "mr-7 text-black";
   return (
     <div
-      className="w-full my-3 grid grid-cols-3 md:flex md:justify-center md:items-center
+      className="text-blackw-full mt-8 my-3 grid grid-cols-3 md:flex md:justify-center md:items-center
     "
     >
       <Link shallow passHref href="/work">
@@ -23,6 +23,7 @@ export default function Nav() {
       <a className={linkClasses}>Deezer</a>
       <a className={linkClasses}>Bandcamp</a>
       <a className={linkClasses}>Twitter</a>
+      <span className="highlight--secondary text-xl">Subscribe</span>
     </div>
   );
 }
