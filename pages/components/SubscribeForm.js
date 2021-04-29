@@ -18,7 +18,7 @@ export default function SubscribeForm() {
           required: true,
         },
       ]}
-      className="p-20"
+      className="p-10"
     />
   );
 }

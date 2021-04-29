@@ -9,12 +9,19 @@
 
 @layer base {
   a {
-    @apply cursor-pointer;
-    @apply text-primary;
-    @apply hover:opacity-75;
+    @apply cursor-pointer text-primary hover:opacity-75;
   }
   p {
     @apply mb-4;
+  }
+  input {
+    @apply p-2 m-4 border-solid border-grey border;
+  }
+  button {
+    @apply bg-primary p-2 cursor-pointer text-white;
+  }
+  strong {
+    @apply text-primary;
   }
 }
 
