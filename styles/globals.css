@@ -58,3 +58,18 @@ body {
   padding: 3px 6px;
   color: white;
 }
+
+.bottom-line {
+  padding-top: 0.5rem;
+  width: 1.2rem;
+  border-bottom: 0.2rem solid #cc6666;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s linear;
+  position: absolute;
+}
+
+.menu-item-name:hover + .bottom-line {
+  visibility: visible;
+  opacity: 1;
+}
