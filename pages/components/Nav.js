@@ -16,13 +16,49 @@ export default function Nav() {
       <Link shallow passHref href="/">
         <a className={linkClasses}> Contact </a>
       </Link>
-      <a className={linkClasses}>Elis Records</a>
+      <a
+        href="http://www.elis-records.com/"
+        target="_blank"
+        className={linkClasses}
+      >
+        Elis Records
+      </a>
 
-      <a className={linkClasses}>Instagram</a>
-      <a className={linkClasses}>Spotify</a>
-      <a className={linkClasses}>Deezer</a>
-      <a className={linkClasses}>Bandcamp</a>
-      <a className={linkClasses}>Twitter</a>
+      <a
+        href="https://www.instagram.com/izem__music/"
+        target="_blank"
+        className={linkClasses}
+      >
+        Instagram
+      </a>
+      <a
+        href="https://open.spotify.com/artist/2dJpwMtmOBr9ad4D7vRf2r"
+        target="_blank"
+        className={linkClasses}
+      >
+        Spotify
+      </a>
+      <a
+        href="https://www.deezer.com/en/artist/6272676"
+        target="_blank"
+        className={linkClasses}
+      >
+        Deezer
+      </a>
+      <a
+        href="https://izemsounds.bandcamp.com/album/l-ba"
+        target="_blank"
+        className={linkClasses}
+      >
+        Bandcamp
+      </a>
+      <a
+        href="https://twitter.com/izem"
+        target="_blank"
+        className={linkClasses}
+      >
+        Twitter
+      </a>
       <span className="highlight--secondary text-xl">Subscribe</span>
     </div>
   );

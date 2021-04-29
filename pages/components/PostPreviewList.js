@@ -15,7 +15,7 @@ export default function PostPreviewList(props) {
     <div className=" max-w-3xl mt-2  ">
       {posts.map((post) => {
         return (
-          <div key={post.id} className="mt-10 mb-2 grid grid-cols-2 ">
+          <div key={post.id} className=" mt-10 mb-2 grid grid-cols-2 ">
             <div className="mr-6 cursor-pointer">
               <Link href={`/work/${post.uid}`}>
                 <div className="text-2xl hover:opacity-80">
@@ -25,7 +25,7 @@ export default function PostPreviewList(props) {
               <StreamingLinks post={post} />
               <Link href={`/work/${post.uid}`}>
                 <div>
-                  <div className="mt-8 mb-2 text-sm cursor-pointer hover:opacity-80">
+                  <div className="leading-5 mt-8 mb-2 text-sm cursor-pointer hover:opacity-80">
                     {RichText.render(post.data.preview)}
                   </div>
                   <span className="cursor-pointer hover:opacity-80">
