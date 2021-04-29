@@ -3,6 +3,7 @@ import SubscribeForm from "./SubscribeForm";
 import Modal from "react-modal";
 import { useState } from "react";
 
+
 export default function Nav() {
   const linkClasses = "mr-7 text-black";
 
@@ -28,7 +29,7 @@ export default function Nav() {
         <Link shallow passHref href="/about">
           <a className={linkClasses}> Bio </a>
         </Link>
-        <Link shallow passHref href="/">
+        <Link shallow passHref href="/contact">
           <a className={linkClasses}> Contact </a>
         </Link>
         <a
@@ -81,12 +82,14 @@ export default function Nav() {
           Subscribe
         </span>
       </div>
+      
       <Modal
         isOpen={modalIsOpen}
         style={customStyles}
         onRequestClose={closeModal}
         contentLabel="Example Modal"
       >
+        
         <SubscribeForm />
       </Modal>
     </div>

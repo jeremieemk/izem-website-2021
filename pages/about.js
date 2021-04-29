@@ -2,40 +2,46 @@ import { motion } from "framer-motion";
 import { RichText } from "prismic-reactjs";
 import Prismic from "prismic-javascript";
 import Image from "next/image";
+import Head from "next/head";
 
 export default function About(props) {
   const content = props.content[0];
   return (
-    <motion.div
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      initial={{ opacity: 0 }}
-      className=""
-    >
-      <div className="w-full flex justify-center">
-        <div className="mt-8 max-w-2xl ">
-          <div className="w-2xl h-96 ">
-            <div className="relative w-full h-full ">
-              <Image
-                src={content.data.image.url}
-                alt="post-image"
-                layout="fill"
-                objectFit="cover"
-                objectPosition="center center"
-              />
+    <>
+      <Head>
+        <title>iZem -- Bio</title>
+      </Head>
+      <motion.div
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        initial={{ opacity: 0 }}
+        className=""
+      >
+        <div className="w-full flex justify-center">
+          <div className="mt-8 max-w-2xl ">
+            <div className="w-2xl h-96 ">
+              <div className="relative w-full h-full ">
+                <Image
+                  src={content.data.image.url}
+                  alt="post-image"
+                  layout="fill"
+                  objectFit="cover"
+                  objectPosition="center center"
+                />
+              </div>
             </div>
-          </div>
-          <div>
-            <div className="mt-6 leading-7">
-              {RichText.render(content.data.quotes)}
+            <div>
+              <div className="mt-6 leading-7">
+                {RichText.render(content.data.quotes)}
+              </div>
             </div>
-          </div>
-          <div>
-            <div className="mt-6"> {RichText.render(content.data.text)} </div>
+            <div>
+              <div className="mt-6"> {RichText.render(content.data.text)} </div>
+            </div>
           </div>
         </div>
-      </div>
-    </motion.div>
+      </motion.div>
+    </>
   );
 }
 
