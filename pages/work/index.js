@@ -1,6 +1,5 @@
 import Prismic from "prismic-javascript";
 import Head from "next/head";
-import { motion } from "framer-motion";
 import PostPreviewList from "../components/PostPreviewList";
 
 export default function Work(props) {
@@ -17,16 +16,7 @@ export default function Work(props) {
         ></link>
         <title>iZem -- Work</title>
       </Head>
-      <motion.div
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        initial={{ opacity: 0 }}
-        className=""
-      >
-        <div className="flex justify-center w-full">
-          {props.blogPosts && <PostPreviewList posts={props.blogPosts} />}
-        </div>
-      </motion.div>
+      {props.blogPosts && <PostPreviewList posts={props.blogPosts} />}
     </>
   );
 }
