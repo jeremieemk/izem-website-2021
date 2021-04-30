@@ -37,7 +37,10 @@ export async function getStaticProps() {
   const Client = Prismic.client(apiEndpoint);
   const data = await Client.query(
     // specify the data you're querying
-    Prismic.Predicates.at("document.type", "blog-post")
+    Prismic.Predicates.at("document.type", "blog-post"),
+    {
+      orderings: "[my.blog-post.order desc]",
+    }
   );
   const blogPosts = data.results;
   if (!data) {
