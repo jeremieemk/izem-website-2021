@@ -70,10 +70,7 @@ export default function Nav() {
 
   return (
     <div>
-      <div
-        className="text-blackw-full mt-8 my-3 grid grid-cols-3 md:flex md:justify-center md:items-center
-    "
-      >
+      <div className="hidden md:block text-black-full mt-8 my-3 grid grid-cols-2 md:flex md:justify-center md:items-center">
         {items.map(function (item) {
           return (
             <Link key={item.name} shallow passHref href={item.link}>
@@ -86,7 +83,7 @@ export default function Nav() {
         })}
         <span
           onClick={openModal}
-          className="transform duration-200 hover:scale-105 cursor-pointer highlight--secondary text-xl"
+          className=" transform duration-200 hover:scale-105 cursor-pointer highlight--secondary text-xl"
         >
           Subscribe
         </span>

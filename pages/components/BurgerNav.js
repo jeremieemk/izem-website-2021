@@ -3,17 +3,19 @@ import { slide as Menu } from "react-burger-menu";
 
 export default function BurgerNav() {
   return (
-    <Menu styles={styles} right disableAutoFocus>
-      <a id="home" className="menu-item" href="/">
-        Home
-      </a>
-      <a id="about" className="menu-item" href="/about">
-        About
-      </a>
-      <a id="contact" className="menu-item" href="/contact">
-        Contact
-      </a>
-    </Menu>
+    <div className="md:hidden">
+      <Menu styles={styles} right disableAutoFocus>
+        <a id="home" className="menu-item" href="/">
+          Home
+        </a>
+        <a id="about" className="menu-item" href="/about">
+          About
+        </a>
+        <a id="contact" className="menu-item" href="/contact">
+          Contact
+        </a>
+      </Menu>
+    </div>
   );
 }
 
@@ -22,11 +24,13 @@ const styles = {
     position: "fixed",
     width: "36px",
     height: "30px",
-    right: "36px",
-    top: "36px",
+    right: "1rem",
+    top: "1rem",
   },
   bmBurgerBars: {
     background: "#373a47",
+    height: "4px",
+    background: "grey",
   },
   bmBurgerBarsHover: {
     background: "#a90000",

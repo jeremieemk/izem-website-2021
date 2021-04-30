@@ -15,10 +15,13 @@ export default function PostPreviewList(props) {
     <div className=" max-w-3xl mt-2  ">
       {posts.map((post) => {
         return (
-          <div key={post.id} className=" mt-10 mb-2 grid grid-cols-2 ">
+          <div
+            key={post.id}
+            className="w-auto  mt-10 mb-2 flex flex-col-reverse md:grid md:grid-cols-2 "
+          >
             <div className="mr-6 cursor-pointer">
               <Link href={`/work/${post.uid}`}>
-                <div className="text-2xl hover:opacity-80">
+                <div className="mb-2 md:mb-0 text-2xl hover:opacity-80">
                   {RichText.render(post.data.title)}
                 </div>
               </Link>
@@ -36,7 +39,7 @@ export default function PostPreviewList(props) {
             </div>
             <Link href={`/work/${post.uid}`}>
               <div className="transform duration-200 hover:scale-105 cursor-pointer flex w-full h-full  justify-center items-center ">
-                <div className="relative w-60 h-60 ">
+                <div className="relative w-full md:w-60 h-60 mb-8 md:mb-0">
                   <Image
                     src={imageUrl(post)}
                     alt="post-image"
