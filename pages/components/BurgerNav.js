@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { slide as Menu } from "react-burger-menu";
 import { navItems } from "../utilities/navItems";
+import SubscribeModal from "./SubscribeModal";
 
 export default function BurgerNav() {
   return (
@@ -46,6 +47,8 @@ const styles = {
   bmMenuWrap: {
     width: "100vw",
     height: "100vh",
+    right: "0px",
+    top: "0px",
   },
   bmMenu: {
     background: "white",

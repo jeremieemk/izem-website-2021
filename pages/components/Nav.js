@@ -1,22 +1,9 @@
 import Link from "next/link";
-import SubscribeForm from "./SubscribeForm";
-import Modal from "react-modal";
-import { useState } from "react";
 import { navItems } from "../utilities/navItems";
+import SubscribeModal from "./SubscribeModal";
 
 export default function Nav() {
   const linkClasses = "mr-7 text-black menu-item-name";
-
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-
-  function openModal() {
-    setModalIsOpen(true);
-  }
-
-  function closeModal() {
-    setModalIsOpen(false);
-  }
-
   return (
     <div>
       <div className="hidden md:block text-black-full mt-8 my-3 grid grid-cols-2 md:flex md:justify-center md:items-center">
@@ -30,20 +17,7 @@ export default function Nav() {
             </Link>
           );
         })}
-        <span
-          onClick={openModal}
-          className=" transform duration-200 hover:scale-105 cursor-pointer highlight--secondary text-xl"
-        >
-          Subscribe
-        </span>
-        <Modal
-          isOpen={modalIsOpen}
-          style={ModalCustomStyles}
-          onRequestClose={closeModal}
-          contentLabel="Example Modal"
-        >
-          <SubscribeForm />
-        </Modal>
+        <SubscribeModal />
       </div>
     </div>
   );
