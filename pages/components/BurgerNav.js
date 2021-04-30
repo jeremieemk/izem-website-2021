@@ -1,19 +1,20 @@
 import Link from "next/link";
 import { slide as Menu } from "react-burger-menu";
+import { navItems } from "../utilities/navItems";
 
 export default function BurgerNav() {
   return (
     <div className="md:hidden">
       <Menu styles={styles} right disableAutoFocus>
-        <a id="home" className="menu-item" href="/">
-          Home
-        </a>
-        <a id="about" className="menu-item" href="/about">
-          About
-        </a>
-        <a id="contact" className="menu-item" href="/contact">
-          Contact
-        </a>
+        {navItems.map(function (item) {
+          return (
+            <Link key={item.name} shallow passHref href={item.link}>
+              <a className="text-black mb-2" id={item.name}>
+                {item.name}
+              </a>
+            </Link>
+          );
+        })}
       </Menu>
     </div>
   );
@@ -54,12 +55,15 @@ const styles = {
     fill: "#373a47",
   },
   bmItemList: {
-    color: "black",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
     width: "100vw",
     height: "100vh",
+  },
+  bmItem: {
+    color: "black",
+    marginBottom: "1rem",
   },
 };
