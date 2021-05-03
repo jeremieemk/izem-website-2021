@@ -18,7 +18,7 @@ export default function SubscribeModal() {
       <>
         <span
           onClick={openModal}
-          className=" transform duration-200 hover:scale-105 cursor-pointer highlight--secondary text-xl"
+          className="px-2 py-2 transform duration-200 hover:scale-105 cursor-pointer bg-primary text-xl text-white"
         >
           Subscribe
         </span>

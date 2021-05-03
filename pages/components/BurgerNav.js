@@ -2,11 +2,27 @@ import Link from "next/link";
 import { slide as Menu } from "react-burger-menu";
 import { navItems } from "../utilities/navItems";
 import SubscribeModal from "./SubscribeModal";
+import React, { useState } from "react";
 
 export default function BurgerNav() {
+  const [menuOpenState, setMenuOpenState] = useState(false);
+  function toggleMenuState() {
+    setMenuOpenState(!menuOpenState);
+  }
+  function closeModal() {
+    console.log("function");
+    menuOpenState && setMenuOpenState(false);
+  }
+  console.log("menu state", menuOpenState);
   return (
     <div className="md:hidden">
-      <Menu styles={styles} right disableAutoFocus>
+      <Menu
+        styles={styles}
+        onStateChange={toggleMenuState}
+        right
+        disableAutoFocus
+        isOpen={false}
+      >
         {navItems.map(function (item) {
           return (
             <Link key={item.name} shallow passHref href={item.link}>
