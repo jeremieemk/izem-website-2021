@@ -2,6 +2,7 @@ import Link from "next/link";
 import Menu from "react-burger-menu/lib/menus/slide";
 import { navItems } from "../utilities/navItems";
 import React, { useState, useContext } from "react";
+import SubscribeModal from "./SubscribeModal";
 
 // create a context control the open state
 const MyContext = React.createContext();
@@ -46,6 +47,9 @@ function BurgerMenu() {
           </Link>
         );
       })}
+      <a onClick={ctx.toggleMenu}>
+        <SubscribeModal />
+      </a>
     </Menu>
   );
 }
