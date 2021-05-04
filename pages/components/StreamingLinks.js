@@ -1,5 +1,5 @@
 export default function StreamingLinks(props) {
-  const post = props.post;
+  const post = props.post && props.post;
   const platforms = ["spotify", "bandcamp", "youtube", "soundcloud"];
   const showIcon =
     post.data.bandcamp.url ||
@@ -13,6 +13,7 @@ export default function StreamingLinks(props) {
       )}
       {platforms.map((platform) => {
         return (
+          post &&
           post.data[platform].url && (
             <a
               href={post.data[platform].url}
