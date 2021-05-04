@@ -44,4 +44,7 @@ const ModalCustomStyles = {
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
   },
+  overlay: {
+    backgroundColor: "rgb(255 255 255 / 93%)",
+  },
 };

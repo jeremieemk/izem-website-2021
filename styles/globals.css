@@ -18,7 +18,7 @@
     @apply p-2 m-4 border-solid border-grey border;
   }
   button {
-    @apply bg-primary p-2 cursor-pointer text-white;
+    @apply bg-primary p-2 cursor-pointer text-white w-min;
   }
   strong {
     @apply text-primary;
@@ -72,4 +72,8 @@ body {
 .menu-item-name:hover + .bottom-line {
   visibility: visible;
   opacity: 1;
+}
+
+.subscribe-form > button {
+  margin-top: 1rem;
 }

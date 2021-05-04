@@ -24,7 +24,7 @@ export default function SubscribeForm() {
             required: true,
           },
         ]}
-        className="p-10"
+        className="subscribe-form flex flex-col items-center md:p-10 p-4"
       />
     </motion.div>
   );
