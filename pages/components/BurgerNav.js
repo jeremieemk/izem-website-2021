@@ -1,39 +1,62 @@
 import Link from "next/link";
-import { slide as Menu } from "react-burger-menu";
+import Menu from "react-burger-menu/lib/menus/slide";
 import { navItems } from "../utilities/navItems";
-import SubscribeModal from "./SubscribeModal";
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+
+// create a context control the open state
+const MyContext = React.createContext();
+
+function MyProvider(props) {
+  const [menuOpenState, setMenuOpenState] = useState(false);
+
+  return (
+    <MyContext.Provider
+      value={{
+        isMenuOpen: menuOpenState,
+        toggleMenu: () => setMenuOpenState(false),
+        stateChangeHandler: (newState) => setMenuOpenState(newState.isOpen),
+      }}
+    >
+      {props.children}
+    </MyContext.Provider>
+  );
+}
+
+function BurgerMenu() {
+  const ctx = useContext(MyContext);
+  console.log("context", ctx);
+  return (
+    <Menu
+      styles={styles}
+      isOpen={ctx.isMenuOpen}
+      onStateChange={(state) => ctx.stateChangeHandler(state)}
+      right
+      disableAutoFocus
+    >
+      {navItems.map(function (item) {
+        return (
+          <Link key={item.name} shallow passHref href={item.link}>
+            <a
+              className="text-black mb-2"
+              id={item.name}
+              onClick={ctx.toggleMenu}
+            >
+              {item.name}
+            </a>
+          </Link>
+        );
+      })}
+    </Menu>
+  );
+}
 
 export default function BurgerNav() {
-  const [menuOpenState, setMenuOpenState] = useState(false);
-  function toggleMenuState() {
-    setMenuOpenState(!menuOpenState);
-  }
-  function closeModal() {
-    console.log("function");
-    menuOpenState && setMenuOpenState(false);
-  }
-  console.log("menu state", menuOpenState);
   return (
-    <div className="md:hidden">
-      <Menu
-        styles={styles}
-        onStateChange={toggleMenuState}
-        right
-        disableAutoFocus
-        isOpen={false}
-      >
-        {navItems.map(function (item) {
-          return (
-            <Link key={item.name} shallow passHref href={item.link}>
-              <a className="text-black mb-2" id={item.name}>
-                {item.name}
-              </a>
-            </Link>
-          );
-        })}
-      </Menu>
-    </div>
+    <MyProvider>
+      <div className="md:hidden">
+        <BurgerMenu />
+      </div>
+    </MyProvider>
   );
 }
 
