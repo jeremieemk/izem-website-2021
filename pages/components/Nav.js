@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { navItems } from "../utilities/navItems";
+import { navItems } from "../../utilities/navItems";
 import SubscribeModal from "./SubscribeModal";
 
 export default function Nav() {

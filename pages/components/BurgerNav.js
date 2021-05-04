@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Menu from "react-burger-menu/lib/menus/slide";
-import { navItems } from "../utilities/navItems";
+import { navItems } from "../../utilities/navItems";
 import React, { useState, useContext } from "react";
 import SubscribeModal from "./SubscribeModal";
 
