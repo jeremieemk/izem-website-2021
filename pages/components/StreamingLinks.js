@@ -32,5 +32,5 @@ export default function StreamingLinks(props) {
 }
 
 StreamingLinks.defaultProps = {
-  post: {},
+  post: null,
 };
