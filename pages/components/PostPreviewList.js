@@ -57,3 +57,7 @@ export default function PostPreviewList(props) {
     </div>
   );
 }
+
+PostPreviewList.defaultProps = {
+  posts: [],
+};

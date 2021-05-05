@@ -28,3 +28,7 @@ export default function StreamingLinks(props) {
     </div>
   );
 }
+
+StreamingLinks.defaultProps = {
+  post: {},
+};
