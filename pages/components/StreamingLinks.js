@@ -2,10 +2,11 @@ export default function StreamingLinks(props) {
   const post = props.post;
   const platforms = ["spotify", "bandcamp", "youtube", "soundcloud"];
   const showIcon =
-    post.data.bandcamp.url ||
-    post.data.spotify.url ||
-    post.data.youtube.url ||
-    post.data.soundcloud.url;
+    post &&
+    (post.data.bandcamp.url ||
+      post.data.spotify.url ||
+      post.data.youtube.url ||
+      post.data.soundcloud.url);
 
   return (
     <div className="flex items-center">
@@ -14,6 +15,7 @@ export default function StreamingLinks(props) {
       )}
       {platforms.map((platform) => {
         return (
+          post &&
           post.data[platform].url && (
             <a
               href={post.data[platform].url}
@@ -29,7 +31,3 @@ export default function StreamingLinks(props) {
     </div>
   );
 }
-
-StreamingLinks.defaultProps = {
-  post: null,
-};
