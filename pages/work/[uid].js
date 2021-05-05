@@ -15,7 +15,7 @@ export default function Post(props) {
       className=""
     >
       <div className="w-full flex justify-center">
-        <SinglePost post={props.post} />
+        {props.post && <SinglePost post={props.post} />}
       </div>
     </motion.div>
   );

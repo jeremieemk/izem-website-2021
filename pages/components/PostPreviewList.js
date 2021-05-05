@@ -25,7 +25,7 @@ export default function PostPreviewList(props) {
                   {RichText.render(post.data.title)}
                 </div>
               </Link>
-              <StreamingLinks post={post} />
+              {post && <StreamingLinks post={post} />}
               <Link href={`/work/${post.uid}`}>
                 <div>
                   <div className="leading-5 mt-8 mb-2 text-sm cursor-pointer hover:opacity-80">
