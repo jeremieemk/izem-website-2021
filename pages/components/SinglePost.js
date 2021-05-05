@@ -31,7 +31,3 @@ export default function SinglePost(props) {
     )
   );
 }
-
-SinglePost.defaultProps = {
-  post: [],
-};
