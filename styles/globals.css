@@ -18,7 +18,7 @@
     @apply p-2 m-4 border-solid border-grey border;
   }
   button {
-    @apply bg-primary p-2 cursor-pointer text-white w-min;
+    @apply bg-primary p-2 cursor-pointer text-white w-min  hover:opacity-80;
   }
   strong {
     @apply text-primary;
@@ -75,12 +75,5 @@ body {
 }
 
 .subscribe-form > button {
-  margin-left: 1rem;
-}
-
-@media only screen and (max-width: 600px) {
-  .subscribe-form > button {
-    margin-top: 1rem;
-    margin-left: 0;
-  }
+  margin: 1rem;
 }
