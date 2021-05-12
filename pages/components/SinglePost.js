@@ -1,6 +1,7 @@
 import { RichText } from "prismic-reactjs";
 import Image from "next/image";
 import StreamingLinks from "./StreamingLinks";
+import DownloadGate from "./DownloadGate";
 
 export default function SinglePost(props) {
   const post = props.post && props.post[0];
@@ -23,6 +24,7 @@ export default function SinglePost(props) {
         </div>
         <StreamingLinks post={post} />
         <div className="mt-6"> {RichText.render(post.data.text)} </div>
+        {post.data.download.url && <DownloadGate />}
       </div>
     </div>
   ) : null;
