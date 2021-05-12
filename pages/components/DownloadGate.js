@@ -1,7 +1,9 @@
 import { useState } from "react";
 import axios from "axios";
+import { motion } from "framer-motion";
 
 export default function DownloadGate(props) {
+  console.log("uid", props.uid);
   const [formVisible, setFormVisible] = useState(false);
   const [status, setStatus] = useState({
     submitted: false,
@@ -44,6 +46,7 @@ export default function DownloadGate(props) {
     });
   };
   const handleOnSubmit = (e) => {
+    console.log("inputs", inputs);
     e.preventDefault();
     setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
     axios({
@@ -54,7 +57,7 @@ export default function DownloadGate(props) {
       .then((response) => {
         handleServerResponse(
           true,
-          "Thank you, your message has been submitted."
+          "I just sent the link to your email. Thanks. 🧸"
         );
       })
       .catch((error) => {
@@ -80,33 +83,40 @@ export default function DownloadGate(props) {
         <img className="h-4 mr-2" src="/img/download.png" alt="listen-icon" />
         <h1>Download the track</h1>
       </div>
+
       {formVisible && (
-        <form onSubmit={handleOnSubmit}>
-          <label htmlFor="name">Name</label>
-          <input
-            id="name"
-            name="name"
-            onChange={handleOnChange}
-            required
-            value={inputs.message}
-          />
-          <label htmlFor="email">Email</label>
-          <input
-            id="email"
-            type="email"
-            name="_replyto"
-            onChange={handleOnChange}
-            required
-            value={inputs.email}
-          />
-          <button type="submit" disabled={status.submitting}>
-            {!status.submitting
-              ? !status.submitted
-                ? "Send"
-                : "Sent"
-              : "Sending..."}
-          </button>
-        </form>
+        <motion.div
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          initial={{ opacity: 0 }}
+        >
+          <form onSubmit={handleOnSubmit}>
+            <label htmlFor="name">Name</label>
+            <input
+              id="name"
+              name="name"
+              onChange={handleOnChange}
+              required
+              value={inputs.message}
+            />
+            <label htmlFor="email">Email</label>
+            <input
+              id="email"
+              type="email"
+              name="_replyto"
+              onChange={handleOnChange}
+              required
+              value={inputs.email}
+            />
+            <button type="submit" disabled={status.submitting}>
+              {!status.submitting
+                ? !status.submitted
+                  ? "Send me the link"
+                  : "Sent"
+                : "Sending..."}
+            </button>
+          </form>
+        </motion.div>
       )}
 
       {status.info.error && (

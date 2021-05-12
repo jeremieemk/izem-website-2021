@@ -76,4 +76,9 @@ body {
 
 .subscribe-form > button {
   margin: 1rem;
+  width: fit-content;
+}
+
+button {
+  width: fit-content;
 }

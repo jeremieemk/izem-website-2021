@@ -25,7 +25,7 @@ export default function SinglePost(props) {
         <StreamingLinks post={post} />
         <div className="mt-6"> {RichText.render(post.data.text)} </div>
         {post.data.download.url && (
-          <DownloadGate uid={post.data.uid} link={post.data.download.url} />
+          <DownloadGate uid={post.uid} link={post.data.download.url} />
         )}
       </div>
     </div>
