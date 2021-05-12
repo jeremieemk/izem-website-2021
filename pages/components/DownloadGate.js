@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 
-export default function DownloadGate() {
+export default function DownloadGate(props) {
   const [formVisible, setFormVisible] = useState(false);
   const [status, setStatus] = useState({
     submitted: false,
@@ -11,6 +11,8 @@ export default function DownloadGate() {
   const [inputs, setInputs] = useState({
     name: "",
     email: "",
+    link: props.link,
+    uid: props.uid,
   });
   const handleServerResponse = (ok, msg) => {
     if (ok) {
@@ -58,6 +60,16 @@ export default function DownloadGate() {
       .catch((error) => {
         handleServerResponse(false, error.response.data.error);
       });
+    axios({
+      method: "POST",
+      url: "/api/download",
+      data: inputs,
+    }).then((res) => {
+      console.log("details sent");
+      if (res.status === 200) {
+        console.log("succeeded!");
+      }
+    });
   };
   function showForm() {
     setFormVisible(true);
