@@ -17,11 +17,11 @@ export default function (req, res) {
     secure: true,
   });
   const mailData = {
-    from: "downloads@izem.me",
+    from: "iZem DL",
     to: req.body.email,
-    subject: `Your dowload link from iZem 🐪`,
-    text: req.body.link,
-    html: `<div>${req.body.link}</div>`,
+    subject: `Your download link from iZem 🐪`,
+    text: `Hi there! Thanks for visting my site 🦀 Here's the link you requested : ${req.body.link}. Feel free to reply this this email, I'd be happy to hear from you 🧸. Jérémie / iZem`,
+    html: `<div>Hi there!<br/><br/>Thanks for visting my site 🦀 <br/><br/>Here's the link you requested : ${req.body.link}.<br/><br/>Feel free to reply to this email, I'd be happy to hear from you 🧸.<br/><br/>Jérémie / iZem</div>`,
   };
   transporter.sendMail(mailData, function (err, info) {
     if (err) console.log(err);
