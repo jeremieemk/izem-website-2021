@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 export default function Post(props) {
   const router = useRouter();
   const uid = router.query.uid;
-  console.log("yes", props);
   return (
     <motion.div
       animate={{ opacity: 1 }}
@@ -26,7 +25,6 @@ export async function getStaticProps(context) {
   const apiEndpoint = "https://izem-site-2021.cdn.prismic.io/api/v2";
   const Client = Prismic.client(apiEndpoint);
   const uid = context.params.uid;
-  console.log(uid);
   const data = await Client.query(
     // specify the data you're querying
     Prismic.Predicates.at("my.blog-post.uid", uid)
@@ -58,7 +56,7 @@ export async function getStaticPaths() {
       },
     };
   });
-  console.log("paths", paths);
+
   return {
     paths,
     fallback: false,

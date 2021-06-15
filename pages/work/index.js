@@ -3,17 +3,9 @@ import Head from "next/head";
 import PostPreviewList from "../components/PostPreviewList";
 
 export default function Work(props) {
-  console.log("index page", props);
   return (
     <>
       <Head>
-        <link
-          rel="preload"
-          as="font"
-          href="/fonts/bentonsansregular.otf"
-          type="font/otf"
-          crossorigin="anonymous"
-        ></link>
         <title>iZem -- Work</title>
       </Head>
       {props.blogPosts && <PostPreviewList posts={props.blogPosts} />}

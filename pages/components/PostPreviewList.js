@@ -5,7 +5,6 @@ import StreamingLinks from "./StreamingLinks";
 
 export default function PostPreviewList(props) {
   const posts = props.posts;
-  console.log(props);
   function imageUrl(post) {
     return post.data.squareimage.url
       ? post.data.squareimage.url

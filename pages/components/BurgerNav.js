@@ -25,7 +25,6 @@ function MyProvider(props) {
 
 function BurgerMenu() {
   const ctx = useContext(MyContext);
-  console.log("context", ctx);
   return (
     <Menu
       styles={styles}

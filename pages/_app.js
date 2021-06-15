@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import MainContainer from "./components/MainContainer";
 import BurgerNav from "./components/BurgerNav";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
   return (
