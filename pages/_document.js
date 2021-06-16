@@ -22,6 +22,23 @@ export default class MyDocument extends Document {
           `,
             }}
           />
+          <meta
+            name="keywords"
+            content="izem, french, music, producer, lisbon, sete, paris, remix, edit, guts, mayra andrade, jimena angel"
+          />
+          <meta name="description" content="Website of music producer iZem" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta
+            name="google-site-verification"
+            content="q1zhNmPIBrGG_IZeAYflyB26LxK9BaWkTByeFOtzSU8"
+          />
+          <meta property="og:url" content="https://www.izem.me" />
+          <meta property="og:title" content="iZem" />
+          <meta
+            property="og:description"
+            content="Website of music producer iZem"
+          />
+          <meta property="og:image" content="/img/izem-belem.jpg" />
           <link
             rel="preload"
             as="font"
