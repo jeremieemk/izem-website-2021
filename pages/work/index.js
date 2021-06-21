@@ -8,7 +8,7 @@ export default function Work(props) {
       <Head>
         <title>iZem -- Work</title>
       </Head>
-      <div className="mb-14">
+      <div className="mt-10 md:mt-2">
         <p>
           Hey! I'm <span className="text-primary">Jérémie</span> aka iZem. 🐪
         </p>
