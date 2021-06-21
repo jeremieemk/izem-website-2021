@@ -69,6 +69,12 @@ body {
   position: absolute;
 }
 
+.work-bottom-line {
+  /* padding-top: 3rem; */
+  width: 1.2rem;
+  border-bottom: 0.2rem solid #cc6666;
+}
+
 .menu-item-name:hover + .bottom-line {
   visibility: visible;
   opacity: 1;

@@ -1,7 +1,10 @@
-export default function Home() {
+export default function Home(props) {
   return (
-    <div className="mt-8 w-full">
-      <span>Home</span>
-    </div>
+    <>
+      <Head>
+        <title>iZem -- Home</title>
+      </Head>
+      <p>Home</p>
+    </>
   );
 }

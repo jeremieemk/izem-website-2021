@@ -8,7 +8,28 @@ export default function Work(props) {
       <Head>
         <title>iZem -- Work</title>
       </Head>
-      {props.blogPosts && <PostPreviewList posts={props.blogPosts} />}
+      <div className="mb-14">
+        <p>
+          Hey! I'm <span className="text-primary">Jérémie</span> aka iZem. 🐪
+        </p>
+        <p>
+          I am a clumsy guitarist, a producer, a coder and a fervent music nerd.
+          💻
+        </p>
+        <p>
+          Introvert, early riser and love exploring places, cultures and
+          technology. 🌴
+        </p>
+        <p>
+          Originally from France, I lived in 7 countries, 2 continents, 15
+          cities and countless shared houses. I speak 4 languages fluently. 🚌
+        </p>
+        <p>Here are some of my recent projects: </p>
+        <div className="work-bottom-line"></div>
+      </div>
+      <div className="mt-14">
+        {props.blogPosts && <PostPreviewList posts={props.blogPosts} />}
+      </div>
     </>
   );
 }

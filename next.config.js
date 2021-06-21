@@ -2,6 +2,7 @@ module.exports = {
   images: {
     domains: ["images.prismic.io"],
   },
+
   async redirects() {
     return [
       {
