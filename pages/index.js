@@ -1,10 +1,3 @@
 export default function Home(props) {
-  return (
-    <>
-      <Head>
-        <title>iZem -- Home</title>
-      </Head>
-      <p>Home</p>
-    </>
-  );
+  return <p>Home</p>;
 }
