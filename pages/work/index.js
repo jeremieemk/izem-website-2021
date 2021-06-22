@@ -13,8 +13,7 @@ export default function Work(props) {
           Hey! I'm <span className="text-primary">Jérémie</span> aka iZem. 🐪
         </p>
         <p>
-          I am a clumsy guitarist, a producer, a coder and a fervent music nerd.
-          💻
+          I am a music producer, a clumsy guitarist and a fervent music nerd. 🦀
         </p>
         <p>
           Introvert, early riser and love exploring places, cultures and
@@ -24,7 +23,10 @@ export default function Work(props) {
           Originally from France, I lived in 7 countries, 2 continents, 15
           cities and countless shared houses. I speak 4 languages fluently. 🚌
         </p>
-        <p>Here are some of my recent projects: </p>
+        <p className="mb-10">
+          Here are some of my recent{" "}
+          <span className="text-primary">projects:</span>
+        </p>
         <div className="work-bottom-line"></div>
       </div>
       <div className="mt-14">
