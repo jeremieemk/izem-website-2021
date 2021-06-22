@@ -8,20 +8,23 @@ export default function Work(props) {
       <Head>
         <title>iZem -- Work</title>
       </Head>
-      <div className="mt-10 md:mt-2">
+      <div className=" mt-10 md:mt-2">
         <p>
           Hey! I'm <span className="text-primary">Jérémie</span> aka iZem. 🐪
         </p>
         <p>
-          I am a music producer, a clumsy guitarist and a fervent music nerd. 🦀
+          I am a music <span className="text-primary">producer</span>, a clumsy
+          guitarist and a fervent music nerd.
         </p>
         <p>
-          Introvert, early riser and love exploring places, cultures and
-          technology. 🌴
+          Introvert, early riser and love{" "}
+          <span className="text-primary">exploring</span> places, cultures and
+          technology.
         </p>
         <p>
           Originally from France, I lived in 7 countries, 2 continents, 15
-          cities and countless shared houses. I speak 4 languages fluently. 🚌
+          cities and countless shared houses. I speak 4{" "}
+          <span className="text-primary">languages</span> fluently.
         </p>
         <p className="mb-10">
           Here are some of my recent{" "}
