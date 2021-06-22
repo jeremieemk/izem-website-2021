@@ -17,7 +17,7 @@ export default function Work(props) {
           guitarist and a fervent music nerd.
         </p>
         <p>
-          Introvert, early riser and love{" "}
+          Early riser, introvert, and love{" "}
           <span className="text-primary">exploring</span> places, cultures and
           technology.
         </p>
