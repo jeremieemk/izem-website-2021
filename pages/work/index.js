@@ -3,6 +3,7 @@ import Head from "next/head";
 import PostPreviewList from "../components/PostPreviewList";
 
 export default function Work(props) {
+  console.log(props);
   return (
     <>
       <Head>
@@ -48,6 +49,7 @@ export async function getStaticProps() {
     Prismic.Predicates.at("document.type", "blog-post"),
     {
       orderings: "[my.blog-post.order desc]",
+      pageSize: 30,
     }
   );
   const blogPosts = data.results;
