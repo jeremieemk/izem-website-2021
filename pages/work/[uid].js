@@ -27,7 +27,10 @@ export async function getStaticProps(context) {
   const uid = context.params.uid;
   const data = await Client.query(
     // specify the data you're querying
-    Prismic.Predicates.at("my.blog-post.uid", uid)
+    Prismic.Predicates.at("my.blog-post.uid", uid),
+    {
+      pageSize: 30,
+    }
   );
   const post = data.results;
   if (!data) {
@@ -45,7 +48,10 @@ export async function getStaticPaths() {
   const Client = Prismic.client(apiEndpoint);
   const data = await Client.query(
     // specify the data you're querying
-    Prismic.Predicates.at("document.type", "blog-post")
+    Prismic.Predicates.at("document.type", "blog-post"),
+    {
+      pageSize: 30,
+    }
   );
   const posts = data.results;
   // generate the paths
