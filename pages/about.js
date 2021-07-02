@@ -5,6 +5,7 @@ import Head from "next/head";
 
 export default function About(props) {
   const content = props.content[0];
+
   return (
     <>
       <Head>

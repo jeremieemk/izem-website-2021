@@ -3,7 +3,6 @@ import Head from "next/head";
 import PostPreviewList from "../components/PostPreviewList";
 
 export default function Work(props) {
-  console.log(props);
   return (
     <>
       <Head>

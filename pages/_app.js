@@ -4,19 +4,21 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import MainContainer from "./components/MainContainer";
 import BurgerNav from "./components/BurgerNav";
-import Head from "next/head";
+import FacebookPixel from "./components/FacebookPixel";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div className=" p-4 w-screen" id="outer-container">
-      <BurgerNav />
-      <Header />
-      <Nav pageWrapId={"page-wrap"} outerContainerId={"outer-container"} />
-      <MainContainer>
-        <Component {...pageProps} id="page-wrap" />
-      </MainContainer>
-      <Footer className="absolute bottom-0" />
-    </div>
+    <FacebookPixel>
+      <div className=" p-4 w-screen" id="outer-container">
+        <BurgerNav />
+        <Header />
+        <Nav pageWrapId={"page-wrap"} outerContainerId={"outer-container"} />
+        <MainContainer>
+          <Component {...pageProps} id="page-wrap" />
+        </MainContainer>
+        <Footer className="absolute bottom-0" />
+      </div>
+    </FacebookPixel>
   );
 }
 
