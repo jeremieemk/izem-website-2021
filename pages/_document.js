@@ -64,6 +64,10 @@ export default class MyDocument extends Document {
             content="Website of music producer iZem"
           />
           <meta property="og:image" content="/img/izem-belem.jpg" />
+          <meta
+            name="facebook-domain-verification"
+            content="cg2d8jl7t4ht0hgk0czgq9cg5mxpgq"
+          />
           <link
             rel="preload"
             as="font"
