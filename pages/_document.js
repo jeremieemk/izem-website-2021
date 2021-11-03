@@ -73,7 +73,7 @@ export default class MyDocument extends Document {
             as="font"
             href="/fonts/bentonsansregular.otf"
             type="font/otf"
-            crossorigin="anonymous"
+            crossOrigin="anonymous"
           ></link>
         </Head>
         <body>
