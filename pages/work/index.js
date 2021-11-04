@@ -23,7 +23,7 @@ export default function Work(props) {
         </p>
         <p>
           Originally from France, I lived in 7 countries, 2 continents, 15
-          cities and countless shared houses. I speak 4 languages fluently.
+          cities and countless shared houses.
         </p>
         <p className="mb-10">Here are some of my recent projects:</p>
         {/* <div className="work-bottom-line"></div> */}
