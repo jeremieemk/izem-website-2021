@@ -11,27 +11,38 @@
   ],
   "lowPriorityFiles": [
     "static/development/_buildManifest.js",
-    "static/development/_ssgManifest.js"
+    "static/development/_ssgManifest.js",
+    "static/development/_middlewareManifest.js"
   ],
   "pages": {
     "/_app": [
-      "static/chunks/main.js",
       "static/chunks/webpack.js",
+      "static/chunks/main.js",
       "static/chunks/pages/_app.js"
     ],
     "/_error": [
-      "static/chunks/main.js",
       "static/chunks/webpack.js",
+      "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/work": [
-      "static/chunks/main.js",
+    "/about": [
       "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/about.js"
+    ],
+    "/contact": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/contact.js"
+    ],
+    "/work": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
       "static/chunks/pages/work.js"
     ],
     "/work/[uid]": [
-      "static/chunks/main.js",
       "static/chunks/webpack.js",
+      "static/chunks/main.js",
       "static/chunks/pages/work/[uid].js"
     ]
   },
