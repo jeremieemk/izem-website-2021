@@ -10,7 +10,7 @@ export const navItems = [
     showOnDesktop: true
   },
   {
-    name: "Gigs",
+    name: "Tour Dates",
     link: "https://www.songkick.com/artists/8355253-izem",
     showOnDesktop: true
   },
