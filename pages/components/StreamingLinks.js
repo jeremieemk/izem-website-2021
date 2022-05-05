@@ -20,7 +20,7 @@ export default function StreamingLinks(props) {
             <a
               href={post.data[platform].url}
               target="_blank"
-              className="transform duration-200 hover:scale-105 hover:opacity-100 highlight--secondary mr-2 text-xs  md:text-sm h-6"
+              className="transform duration-200 rounded-md hover:scale-105 hover:opacity-100 highlight--secondary mr-2 text-xs  md:text-sm h-6"
               key={platform}
             >
               {platform}

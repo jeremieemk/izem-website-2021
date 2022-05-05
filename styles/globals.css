@@ -83,8 +83,15 @@ body {
 .subscribe-form > button {
   margin: 1rem;
   width: fit-content;
+  color: white;
+  background: #cc6666;
+  border-radius: 0.375rem;
 }
 
 button {
   width: fit-content;
+}
+
+.social-icon {
+  bottom: 1px;
 }
