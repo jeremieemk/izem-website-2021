@@ -48,13 +48,13 @@ body {
 }
 
 .highlight {
-  color: #cc6666;
+  color: #B12205;
   padding: 5px 10px;
   letter-spacing: 4px;
 }
 
 .highlight--secondary {
-  background-color: #cc6666;
+  background-color: #B12205;
   padding: 3px 6px;
   color: white;
 }
@@ -62,7 +62,7 @@ body {
 .bottom-line {
   padding-top: 0.5rem;
   width: 1.2rem;
-  border-bottom: 0.2rem solid #cc6666;
+  border-bottom: 0.2rem solid #B12205;
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s, opacity 0.3s linear;
@@ -72,7 +72,7 @@ body {
 .work-bottom-line {
   /* padding-top: 3rem; */
   width: 1.2rem;
-  border-bottom: 0.2rem solid #cc6666;
+  border-bottom: 0.2rem solid #B12205;
 }
 
 .menu-item-name:hover + .bottom-line {
@@ -84,7 +84,7 @@ body {
   margin: 1rem;
   width: fit-content;
   color: white;
-  background: #cc6666;
+  background: #B12205;
   border-radius: 0.375rem;
 }
 

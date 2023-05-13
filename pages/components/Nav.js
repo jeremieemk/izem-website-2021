@@ -24,7 +24,7 @@ export default function Nav() {
 				})}
 				<a href="https://www.instagram.com/izem__music/" target="_blank">
 					<InstagramLogo
-						color="#cc6666"
+						color="#B12205"
 						className="relative social-icon"
 						size={32}
 					/>
@@ -34,14 +34,14 @@ export default function Nav() {
 					target="_blank"
 				>
 					<SpotifyLogo
-						color="#cc6666"
+						color="#B12205"
 						className="relative social-icon"
 						size={32}
 					/>
 				</a>
 				<a href="https://twitter.com/iZem" target="_blank">
 					<TwitterLogo
-						color="#cc6666"
+						color="#B12205"
 						className="relative social-icon"
 						size={32}
 					/>
