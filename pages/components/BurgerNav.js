@@ -35,15 +35,18 @@ function BurgerMenu() {
     >
       {navItems.map(function (item) {
         return (
-          <Link key={item.name} shallow passHref href={item.link}>
-            <a
-              className="text-black mb-2"
-              id={item.name}
-              onClick={ctx.toggleMenu}
-            >
-              {item.name}
-            </a>
-          </Link>
+          (<Link
+            key={item.name}
+            shallow
+            passHref
+            href={item.link}
+            className="text-black mb-2"
+            id={item.name}
+            onClick={ctx.toggleMenu}>
+
+            {item.name}
+
+          </Link>)
         );
       })}
       <a onClick={ctx.toggleMenu}>

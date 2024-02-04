@@ -6,18 +6,18 @@ import { TwitterLogo, InstagramLogo, SpotifyLogo } from "phosphor-react";
 export default function Nav() {
 	const linkClasses = "text-black menu-item-name";
 	return (
-		<div>
+        <div>
 			<div className="hidden md:block text-black-full mt-8 my-3 grid grid-cols-2 md:flex md:justify-center md:items-center md:gap-6">
 				{navItems.map(function (item) {
 					if (item.showOnDesktop) {
 						return (
-							<Link key={item.name} shallow passHref href={item.link}>
+                            <Link key={item.name} shallow passHref href={item.link} legacyBehavior>
 								<div className="relative">
 									<a className={linkClasses}> {item.name} </a>
 									<div className="bottom-line"></div>
 								</div>
 							</Link>
-						);
+                        );
 					} else {
 						return null;
 					}
@@ -49,7 +49,7 @@ export default function Nav() {
 				<SubscribeModal />
 			</div>
 		</div>
-	);
+    );
 }
 
 const ModalCustomStyles = {
