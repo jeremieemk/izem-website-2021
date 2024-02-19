@@ -19,6 +19,7 @@ export default function About(props) {
             alt="post-image"
             layout="fill"
             objectFit="cover"
+            className="post-image"
             objectPosition="center center"
           />
         </div>

@@ -4,10 +4,10 @@ import SubscribeModal from "./SubscribeModal";
 import { TwitterLogo, InstagramLogo, SpotifyLogo } from "phosphor-react";
 
 export default function Nav() {
-	const linkClasses = "text-black menu-item-name";
+	const linkClasses = "text-white menu-item-name";
 	return (
         <div>
-			<div className="hidden md:block text-black-full mt-8 my-3 grid grid-cols-2 md:flex md:justify-center md:items-center md:gap-6">
+			<div className="hidden text-black-full mt-8 my-3 grid grid-cols-2 md:flex md:justify-center md:items-center md:gap-6">
 				{navItems.map(function (item) {
 					if (item.showOnDesktop) {
 						return (
@@ -24,7 +24,7 @@ export default function Nav() {
 				})}
 				<a href="https://www.instagram.com/izem__music/" target="_blank">
 					<InstagramLogo
-						color="#B12205"
+						color="#efd3a2"
 						className="relative social-icon"
 						size={32}
 					/>
@@ -34,14 +34,14 @@ export default function Nav() {
 					target="_blank"
 				>
 					<SpotifyLogo
-						color="#B12205"
+						color="#efd3a2"
 						className="relative social-icon"
 						size={32}
 					/>
 				</a>
 				<a href="https://twitter.com/iZem" target="_blank">
 					<TwitterLogo
-						color="#B12205"
+						color="#efd3a2"
 						className="relative social-icon"
 						size={32}
 					/>

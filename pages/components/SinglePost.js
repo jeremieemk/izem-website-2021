@@ -12,6 +12,7 @@ export default function SinglePost(props) {
           <Image
             src={post.data.image.url}
             alt="post-image"
+            className="post-image"
             layout="fill"
             objectFit="cover"
             objectPosition="center center"

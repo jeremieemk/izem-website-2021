@@ -8,7 +8,7 @@ export default function MainContainer(props) {
       initial={{ opacity: 0 }}
     >
       <div className="w-full flex justify-center">
-        <div className="mt-0 md:mt-8 max-w-3xl ">{props.children}</div>
+        <div className="max-w-3xl ">{props.children}</div>
       </div>
     </motion.div>
   );

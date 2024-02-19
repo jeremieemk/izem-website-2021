@@ -30,7 +30,7 @@ export default function PostPreviewList(props) {
                   <div className="leading-5 mt-8 mb-2 text-sm cursor-pointer hover:opacity-80">
                     {RichText.render(post.data.preview)}
                   </div>
-                  <span className="cursor-pointer hover:opacity-80">
+                  <span className="text-primary cursor-pointer hover:opacity-80">
                     Read More
                   </span>
                 </div>
@@ -38,10 +38,11 @@ export default function PostPreviewList(props) {
             </div>
             <Link href={`/work/${post.uid}`} legacyBehavior>
               <div className="transform duration-200 hover:scale-105 cursor-pointer flex w-full h-full  justify-center items-center ">
-                <div className="relative w-full md:w-60 h-60 mb-8 md:mb-0">
+                <div className="relative w-full md:w-60 h-60 mb-8 md:mb-0 ">
                   <Image
                     src={imageUrl(post)}
                     alt="post-image"
+                    className="post-image"
                     layout="fill"
                     objectFit="cover"
                     priority
