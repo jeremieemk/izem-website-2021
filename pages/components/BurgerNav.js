@@ -96,8 +96,9 @@ const styles = {
     top: "0px",
   },
   bmMenu: {
-    background: "white",
+    background: "black",
     fontSize: "1.15em",
+
   },
   bmMorphShape: {
     fill: "#373a47",
@@ -111,7 +112,7 @@ const styles = {
     height: "100vh",
   },
   bmItem: {
-    color: "black",
+    color: "white",
     marginBottom: "1rem",
   },
 };

@@ -31,7 +31,7 @@ body {
   font-family: regular;
   box-sizing: border-box;
   background: black;
-  color: white
+  color: white;
 }
 
 .button {
@@ -92,7 +92,7 @@ body {
 
 .post-image {
   box-shadow: 15px 15px 60px 0px rgba(0, 0, 0, 0.2);
-  border-radius: 5px
+  border-radius: 5px;
 }
 
 button {

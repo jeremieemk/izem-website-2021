@@ -8,7 +8,7 @@ export default function Work(props) {
       <Head>
         <title>iZem -- Work</title>
       </Head>
-      <div className=" mt-10 md:mt-6">
+      <div className=" mt-10 md:mt-3">
         <p>
           Hey! I'm <span className="text-primary">Jérémie</span> aka iZem. 🐪
         </p>
@@ -25,10 +25,10 @@ export default function Work(props) {
           Originally from France, I lived in 7 countries, 2 continents, 15
           cities and countless shared houses.
         </p>
-        <p className="mb-10">Here are some of my recent projects:</p>
+        <p className="mb-10 md:mb-0">Here are some of my recent projects:</p>
         {/* <div className="work-bottom-line"></div> */}
       </div>
-      <div className="mt-14 md:mt-20">
+      <div className="mt-14 md:mt-6">
         {props.blogPosts && <PostPreviewList posts={props.blogPosts} />}
       </div>
     </>
