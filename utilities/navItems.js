@@ -11,7 +11,7 @@ export const navItems = [
   },
   {
     name: "Tour Dates",
-    link: "https://www.songkick.com/artists/8355253-izem",
+    link: "https://www.bandsintown.com/a/7297068-izem",
     showOnDesktop: true
   },
   {
