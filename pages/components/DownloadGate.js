@@ -78,7 +78,7 @@ export default function DownloadGate(props) {
     setFormVisible(true);
   }
   return (
-    <div className="mt-4">
+    <div className="mt-4 ">
       <div className="flex cursor-pointer" onClick={showForm}>
         <img className="h-4 mr-2" src="/img/download.png" alt="listen-icon" />
         <h1>Download the track</h1>
@@ -93,6 +93,7 @@ export default function DownloadGate(props) {
           <form onSubmit={handleOnSubmit}>
             <label htmlFor="name">Name</label>
             <input
+              className="rounded text-black"
               id="name"
               name="name"
               onChange={handleOnChange}
@@ -102,13 +103,14 @@ export default function DownloadGate(props) {
             <label htmlFor="email">Email</label>
             <input
               id="email"
+              className="rounded text-black"
               type="email"
               name="_replyto"
               onChange={handleOnChange}
               required
               value={inputs.email}
             />
-            <button type="submit" disabled={status.submitting}>
+            <button className="bg-white rounded text-black " type="submit" disabled={status.submitting}>
               {!status.submitting
                 ? !status.submitted
                   ? "Send me the link"

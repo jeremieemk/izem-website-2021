@@ -5,15 +5,15 @@ export default function (req, res) {
   let nodemailer = require("nodemailer");
   const transporter = nodemailer.createTransport({
     port: 465,
-    host: "smtp.gmail.com",
+    host: "mail.infomaniak.com",
     auth: {
-      user: "downloads@izem.me",
+      user: "jeremie@elis-records.com",
       pass: PASSWORD,
     },
     secure: true,
   });
   const mailData = {
-    from: "iZem DL",
+    from: "jeremie@elis-records.com", 
     to: req.body.email,
     subject: `Your download link from iZem 🐪`,
     text: `Hi there! Thanks for visting my site 🦀 Here's the link you requested : ${req.body.link}. Feel free to reply this this email, I'd be happy to hear from you 🧸. Jérémie / iZem`,
