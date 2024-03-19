@@ -57,7 +57,7 @@ export default function DownloadGate(props) {
       .then((response) => {
         handleServerResponse(
           true,
-          "🧸 I just sent the link to your email. Check the spam folder, just in case. If it didn't work, feel to email me at jeremie@izem.me. Thanks."
+          "🧸 I just sent the link to your email. Check the spam folder, just in case. If it didn't work, feel to email me at jeremie@elis-records.com. Thanks."
         );
       })
       .catch((error) => {
