@@ -1,6 +1,6 @@
 import { RichText } from "prismic-reactjs";
 import Prismic from "prismic-javascript";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Head from "next/head";
 
 export default function About(props) {
